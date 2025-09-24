@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Amiko:wght@400;600;700&display=swap');
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+body{
+    width: 440px    ;
+    height: 956px;
+    font-family: 'Amiko';
+    color: #00766B;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+
+}
+
+header{
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: center;  
+    padding-right: 12px;
+
+}
+
+.idioma{
+    padding-top: 13px;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center ;
+    text-align: center;
+    padding: 32px;
+}
+
+.titulo{
+    font-size: 40px;
+    margin-top: 15px;
+}
+
+.slogan{
+    font-size: 20px;
+    margin-top: 15px;
+}
+
+.botoes{
+    padding-top: 170px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.btn{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    width: 334px;
+    border-radius: 17px;
+    background-color: #00766B ;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 45px;
+    cursor: pointer;
+    border: none;
+    box-shadow: 1px, 4px, 4px, black;
+}
+
+
+.btn span{
+    padding-left: 24px;
+}
+
+.btn img{
+    padding-right: 17px;
+}
+
+.esqueceu_senha a{
+    text-decoration: underline;
+    cursor: pointer;
+    color: black;
+
+}
