@@ -14,8 +14,7 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    
-
+    border: 1px black solid;
 }
 
 header{
@@ -85,5 +84,6 @@ header{
     text-decoration: underline;
     cursor: pointer;
     color: black;
+
 
 }
