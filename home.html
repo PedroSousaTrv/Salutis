@@ -26,25 +26,285 @@
         <p class="slogan">O GERENCIADOR DE CUIDADOS<br>NA PALMA DA SUA MÃO</p>
 
         <div class="botoes">
-            <button class="btn">
+            <button class="open-modal" data-modal="modal1">
                 <span>ENTRAR</span>
                 <img src="icons/enter.svg"  >
             </button>
 
-            <button class="btn">
+            <button onclick="startCadastro()" class="open-modal" data-modal="modal2">
                 <span>CADASTRAR</span>
                 <img src="icons/cadastro.svg" >
             </button>
-        </div>
 
-        <div class="esqueceu_senha">
-            <img src="icons/key.png">
-            <a href="#" class="link-senha">ESQUECI A SENHA</a>
         </div>
         
-
-
-
     </main>
+    
+    <!--pop de ENTRAR-->
+            <dialog id="modal1">
+
+                <form class="pop1">
+
+                    <div class="voltar">
+                        <button class="close-modal" data-modal="modal1">
+                            <img src="icons/return.png" alt="icon-return">
+                            <span>Voltar</span>
+                        </button>
+                    </div>
+                    
+
+                
+                    <h1 class="title-entrar">Entrar na Conta</h1>
+
+                    <label class="input-lab">
+                        E-mail<span class="asterisco"> *</span>
+                        <div class="input-bot">
+                            <input class="obrigatorio" placeholder="Digite o E-mail" type="email">
+                            <img src="icons/email-verde.svg" alt="icon-email">
+                        </div>
+                    </label>
+
+                    <label class="input-lab">
+                        Senha<span class="asterisco"> *</span>
+                        <div class="input-bot">
+                            <input class="obrigatorio" placeholder="Digite a Senha" type="password">
+                            <img src="icons/key-verde.png" alt="icon-key">
+                        </div>                       
+                    </label>
+
+                    
+                    <a href="#">Esqueci a senha</a>
+
+                    <button class="login" type="submit"> ENTRAR </button>
+
+                    <div class="or">
+                        <img src="img/Line 1.png" alt="">
+                        <span>OU</span>
+                        <img src="img/Line 1.png" alt="">
+                    </div>
+                    
+                    <div class="lowBox">
+                        <button class="google">
+                            <img src="icons/google.svg" alt="icon-google">
+                            <span>GOOGLE</span>
+                        </button>
+                    </div>
+
+                </form>
+            </dialog>
+
+
+
+
+    <!--pop de CADASTRO - 1  -->
+
+
+            <dialog id="modal2">
+                
+                <form>
+                <!--  ETAPA 1 DO CADASTRO -->
+                <div class="pop2" id="step1"  >
+                    <div class="voltar">
+                        <button class="close-modal" data-modal="modal2">
+                            <img src="icons/return.png" alt="icon-return">
+                            <span>Voltar</span>
+                        </button>
+                    </div>
+                
+                    <h1 class="title-cadastro">Criar Conta</h1>
+
+                    <div class="barra-cadastro">
+                        <div class="barra verde" data-bar="1"></div>
+                        <div class="barra" data-bar="2"></div>
+                        <div class="barra" data-bar="3"></div>
+                    </div>
+
+                    <label class="input-lab2">
+                        Nome<span class="asterisco"> *</span>
+                        <div class="input-bot">
+                            <input class="obrigatorio" placeholder="Digite seu nome" type="text">
+                            <img src="icons/name.svg" alt="icon-name">
+                        </div>
+                    </label>
+
+                    <label class="input-lab2">
+                        E-mail<span class="asterisco"> *</span>
+                        <div class="input-bot">
+                            <input class="obrigatorio" placeholder="Digite o E-mail" type="email">
+                            <img src="icons/email-verde.svg" alt="icon-email">
+                        </div>                       
+                    </label>
+
+                    <label class="input-lab2">
+                        Senha<span class="asterisco"> *</span>
+                        <div class="input-bot">
+                            <input class="obrigatorio" placeholder="Digite a senha" type="password">
+                            <img src="icons/key-verde.png" alt="icon-key">
+                        </div>
+                    </label>
+
+                    <label class="input-lab2">
+                        Confirmação Senha<span class="asterisco"> *</span>
+                        <div class="input-bot">
+                            <input class="obrigatorio" placeholder="Digite a Senha novamente" type="password">
+                            <img src="icons/key-verde.png" alt="icon-key">
+                        </div>                       
+                    </label>
+
+                    <button onclick="proxEtapa()" class="etapa-cadastro" type="button"> Próxima Etapa </button>
+
+                    <div class="or2">
+                        <img src="img/Line 1.png" alt="">
+                        <span>OU</span>
+                        <img src="img/Line 1.png" alt="">
+                    </div>
+                    
+                    <div class="lowBox2">
+                        <button class="google">
+                            <img src="icons/google.svg" alt="icon-google">
+                            <span>GOOGLE</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!--  ETAPA 2 DO CADASTRO -->
+
+                <div class="pop2" id="step2"  style="display: none;" >
+                    <div class="voltar">
+                        <button onclick="voltarEtapa()" type="button">
+                            <img src="icons/return.png" alt="icon-return">
+                            <span>Voltar Etapa</span>
+                        </button>
+                    </div>
+                
+                    <h1 class="title-cadastro">Criar Conta</h1>
+
+                    <div class="barra-cadastro">
+                        <div class="barra" data-bar="1"></div>
+                        <div class="barra verde" data-bar="2"></div>
+                        <div class="barra" data-bar="3"></div>
+                    </div>
+
+                    <label class="input-lab2">
+                        Info1<span class="asterisco"> *</span>
+                        <div class="input-bot">
+                            <input class="obrigatorio" placeholder="Digite seu Info1" type="text">
+                            <img src="icons/name.svg" alt="icon-name">
+                        </div>
+                    </label>
+
+                    <label class="input-lab2">
+                        Info1<span class="asterisco"> *</span>
+                        <div class="input-bot">
+                            <input class="obrigatorio" placeholder="Digite o Info1" type="text">
+                            <img src="icons/email-verde.svg" alt="icon-email">
+                        </div>                       
+                    </label>
+
+                    <label class="input-lab2">
+                        Info1<span class="asterisco"> *</span>
+                        <div class="input-bot">
+                            <input class="obrigatorio" placeholder="Digite a Info1" type="text">
+                            <img src="icons/key-verde.png" alt="icon-key">
+                        </div>
+                    </label>
+
+                    <label class="input-lab2">
+                        Confirmação Info1<span class="asterisco"> *</span>
+                        <div class="input-bot">
+                            <input class="obrigatorio" placeholder="Digite a Info1 novamente" type="text">
+                            <img src="icons/key-verde.png" alt="icon-key">
+                        </div>                       
+                    </label>
+
+                    <button onclick="proxEtapa()" class="etapa-cadastro" type="button"> Próxima Etapa </button>
+
+                    <div class="or2">
+                        <img src="img/Line 1.png" alt="">
+                        <span>OU</span>
+                        <img src="img/Line 1.png" alt="">
+                    </div>
+                    
+                    <div class="lowBox2">
+                        <button class="google">
+                            <img src="icons/google.svg" alt="icon-google">
+                            <span>GOOGLE</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!--  ETAPA 3 DO CADASTRO -->
+                <div class="pop2" id="step3" style="display: none;" >
+                    <div class="voltar">
+                        <button  onclick="voltarEtapa()" type="button">
+                            <img src="icons/return.png" alt="icon-return">
+                            <span>Voltar Etapa</span>
+                        </button>
+                    </div>
+                
+                    <h1 class="title-cadastro">Criar Conta</h1>
+
+                    <div class="barra-cadastro">
+                        <div class="barra" data-bar="1"></div>
+                        <div class="barra" data-bar="2"></div>
+                        <div class="barra verde" data-bar="3"></div>
+                    </div>
+
+                    <label class="input-lab2">
+                        Info<span class="asterisco"> *</span>
+                        <div class="input-bot">
+                            <input class="obrigatorio" placeholder="Digite seu Info2" type="text">
+                            <img src="icons/name.svg" alt="icon-name">
+                        </div>
+                    </label>
+
+                    <label class="input-lab2">
+                        Info<span class="asterisco"> *</span>
+                        <div class="input-bot">
+                            <input class="obrigatorio" placeholder="Digite o Info2" type="text">
+                            <img src="icons/email-verde.svg" alt="icon-email">
+                        </div>                       
+                    </label>
+
+                    <label class="input-lab2">
+                        Info<span class="asterisco"> *</span>
+                        <div class="input-bot">
+                            <input class="obrigatorio" placeholder="Digite a Info2" type="text">
+                            <img src="icons/key-verde.png" alt="icon-key">
+                        </div>
+                    </label>
+
+                    <label class="input-lab2">
+                        Confirmação Info<span class="asterisco"> *</span>
+                        <div class="input-bot">
+                            <input class="obrigatorio" placeholder="Digite a Info2 novamente" type="text">
+                            <img src="icons/key-verde.png" alt="icon-key">
+                        </div>                       
+                    </label>
+
+                    <button onclick="proxEtapa()" class="etapa-cadastro" type="button">Finalizar cadastro</button>
+
+                    <div class="or2">
+                        <img src="img/Line 1.png" alt="">
+                        <span>OU</span>
+                        <img src="img/Line 1.png" alt="">
+                    </div>
+                    
+                    <div class="lowBox2">
+                        <button class="google">
+                            <img src="icons/google.svg" alt="icon-google">
+                            <span>GOOGLE</span>
+                        </button>
+                    </div>
+                </div>
+
+                </form> 
+
+            </dialog>
+
+
+    <script src="modal.js"></script>
+    <Script src="textObrigatorio.js"></SCript>
+    <script src="formCadastro.js"></script>
 </body>
 </html>
