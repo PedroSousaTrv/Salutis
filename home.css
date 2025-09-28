@@ -85,9 +85,12 @@ header{
 /*<!--pop de ENTRAR-->*/
 
 dialog{
-    align-self: center;
-    margin-left: 20px;
-}
+        align-self: center;
+        margin-left: 20px;
+        border: none;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        border-radius: 5px;
+    }
 
 .pop1{
     width: 400px;
@@ -316,3 +319,4 @@ dialog{
     height: 105px;
     background-color: #00766B;
 }
+
